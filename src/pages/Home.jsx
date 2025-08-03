@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
             <AutoSlider />
-            <CommitmentCard />
+             <CommitmentCard />
             <Info />
             <ServicesTestimonials />
         </div>

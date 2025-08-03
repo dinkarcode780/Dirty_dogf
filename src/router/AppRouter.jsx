@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 import MainLayout from "../components/layout/MainLayout";
+import BlogDetail from "../pages/BlogDetail";
 
 // Lazy-loaded pages
 const Home = lazy(() => import("../pages/Home"));
@@ -14,6 +15,7 @@ const Financing = lazy(() => import("../pages/Financing"));
 const GivingBack = lazy(() => import("../pages/GivingBack"));
 const Login = lazy(() => import("../pages/Login"));
 const PageNotFound = lazy(() => import("../pages/PageNotFound"));
+// const BlogDetail = lazy(() => import("../pages/BlogDetail"));
 
 const AppRouter = () => {
   return (
@@ -28,6 +30,7 @@ const AppRouter = () => {
           <Route path="quotes" element={<Quotes />} />
           <Route path="financing" element={<Financing />} />
           <Route path="giving-back" element={<GivingBack />} />
+          <Route path="blog/:blogId" element={<BlogDetail  />} />
         </Route>
 
         {/* Public routes without MainLayout */}
